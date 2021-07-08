@@ -1,0 +1,404 @@
+:root{
+	--MainColour: #DDF1F1; /*background colour*/
+	--SecondaryColour: #F5FBFB; /*lighter background colour*/
+
+	--BorderColour: #c1c1c1;
+
+	--MainText: black;
+	--SecondaryText: #4b5156  ; /*lighter black*/
+
+	--ModeCircleBorder: pink;
+	--BackShadow: #F0F1F1;
+
+	--InputFieldColour: white;
+
+	--ButtonsColour: black;
+
+	--NameCircleBg: black;
+	--NameCircleText: white;
+
+	--BoxColour: black;
+	--BoxTextColour: black;
+
+	--ConsecutiveBoxBg: black;
+	--ConsecutiveBoxText: white;
+
+}
+
+body{
+	padding: 0;
+	margin: 0;
+
+}
+
+
+
+h1, h2, h3, h4, h5, h6, strong{
+	color: var(--MainText);
+	font-family: 'Benne', serif;
+}
+
+h1{ 
+	font-size: 56px;
+}
+h2{ 
+	font-size: 40px;
+}
+h3{ 
+	font-size: 28px;
+}
+h4{ 
+	font-size: 24px;
+}
+h5{ 
+	font-size: 20px;
+}
+h6{ 
+	font-size: 16px;
+}
+
+p, label, textarea{
+	color: var(--MainText);
+	font-family: 'Roboto Mono', monospace;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+
+.section{
+	background-color: var(--MainColour);
+	border-bottom: 0px solid var(--BorderColour);
+	overflow: auto;
+
+}
+
+.main-container{
+	width: 1300px;
+	margin: 0 auto;
+	padding: 20px;
+
+}
+
+.greeting-wrapper{
+	display: grid;
+	text-align: center; 
+	border: none;
+}
+
+.introduction-wrapper{
+	background-color: var(--SecondaryColour);
+	border: 1px solid var(--BorderColour);
+	border-radius: 10px 10px 10px 10px ;
+
+
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* 1fr means 1 collumn, here we have 2 */
+	/*grid-template-rows: 3em 35em;*/ /*1 em means 1 row, first row have size of 4, second row have size of 20*/
+	grid-template-areas: 
+	"topbar-wrapper topbar-wrapper"  /*2 continuos "topbar-wrapper" means it span through 2 collumns*/   
+	"Left-Collumn-wrapper Right-Collumn-wrapper"/*Left on the left collumn and Right on the right collumn*/
+	;
+
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);  /*This is code for shadow, can be generated using a website*/
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75)
+}
+
+.topbar-wrapper{
+	border-bottom: 1px solid var(--BorderColour);
+	grid-area:topbar-wrapper ; /*Set the name to use in the introduction wrapper*/
+	border-radius: 10px 10px 0 0 ;
+	background-color: var(--MainColour);
+
+	display: flex; /*Flexbox*/
+	justify-content: space-between;
+	align-items: center; 
+
+}
+
+.Left-Collumn-wrapper{
+	grid-area:Left-Collumn-wrapper ; /*Set the name to use in the introduction wrapper*/
+	padding: 50px;
+}
+
+.Right-Collumn-wrapper{
+	grid-area:Right-Collumn-wrapper ; /*Set the name to use in the introduction wrapper*/
+
+}
+
+.buttons-wrapper{
+	display: flex;
+	padding: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	color: var(--ButtonsColour);
+
+}
+
+.buttons-wrapper:hover{
+	font-size: 25px;
+	font-style: Bold;
+	color: red;
+}
+
+.button{
+	margin: 5px;
+}
+
+#icon{
+	margin: 0;
+	padding: 10;
+
+}
+
+#icon div{
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+#pro5pic{
+	display: block;
+	margin: 0 auto;
+
+	height: 500px;
+	widthh: 500px;
+	object-fit: cover;
+}
+
+.mode-circle{
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: black;
+	cursor: pointer;
+	margin:  10px;
+	border: 3px solid var(--ModeCircleBorder);
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75)
+
+}
+
+.mode-circle:hover{
+	border-width: 6px;
+}
+
+#light{
+	background-color: whitesmoke;
+}
+
+#dark{
+	background-color: #303841;
+}
+
+#switch-mode-wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+#Name-circle{
+	width: 150px;
+	height: 16px;
+	border: 2px solid var();
+	border-radius: 20px;
+	background-color: var(--NameCircleBg);
+	margin-top: 50px;
+	position: relative;
+}
+
+#whoami-box{
+	width: 300px;
+	padding: 1.5px;
+	font-size: ;
+}
+
+	#pro5pic{       /*change the dimension of pro55 picture to prevent overflow*/
+	height: 400px;
+	widthh: 400px;
+}
+
+#imagesection2{
+	width: 100%;
+}
+
+#box{
+	width: 300px;
+	height: 35px;
+	border: 2px solid black;
+	margin-top: 15px;
+	position: relative;
+	padding-bottom: 2px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 35px;  
+	font-size: 25px;
+	border-color: var(--BoxColour) ;
+
+}
+
+#box a{
+	color: var(--BoxTextColour);
+}
+
+#consecutive-box{
+	width: 70px;
+	height: 35px;
+	border: 2px solid black;
+	background-color: var(--ConsecutiveBoxBg);
+	border-color: var(--BoxColour) ;
+	margin-top: 15px;
+	padding-bottom: 2px;
+	text-align:center; 
+	vertical-align: middle;
+	line-height: 35px; 
+	color: var(--ConsecutiveBoxText);
+	font-size: 25px;
+}
+
+
+#box:hover{
+	width: 320px;
+	height: 55px;
+	line-height: 55px;
+}
+
+.activities-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 400px); /*Instead of writting 1fr 1 fr, we can use repeat() so whenever the contents pass 400px it automatically add a block */							
+	gap:50px;             /*gap between each block*/	
+	justify-content: center;
+}
+
+
+.activities{
+	border: 1px solid var(--BorderColour);
+	border-radius: 10px 10px 10px 10px; /*top left - top right - bottom right - bottom left*/
+
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75)
+}
+
+
+.coverpic{
+	display: block;      /*set to a block, no need of inline block because it's already in a grid*/
+	width: 100%;
+	height:200px;
+	object-fit: cover;   /*to prevent the distorion of the picture*/
+	border-radius: 10px 10px 0px 0px; /*top left - top right - bottom right - bottom left*/
+
+}
+
+.content{
+	background-color: var(--SecondaryColour);
+	border-radius: 0px 0px 10px 10px;
+}
+
+.content a{
+	color: var(--SecondaryText);
+}
+
+.title{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.activities-link{
+	text-align: center;
+	margin-top: 0px;
+	text-decoration: blink;
+	text-decoration-color: blue;
+	padding-bottom: 10px;
+
+}
+
+.activities-link a{
+	font-family: 'Roboto Mono', monospace;
+}
+
+
+ .form{
+ 	display: grid;
+ 	padding: 20px;
+ 	border: 1.5px solid var(--BorderColour);
+ 	border-radius: 10px;	
+ 	background-color: var(--SecondaryColour);
+ 	max-width: 600px;
+ 	margin: auto; /*center the box*/
+ 	margin-bottom: 60px;
+
+
+
+ }
+
+.form textarea{
+	min-height: 90px;
+}
+
+.form label{
+	line-height: 2em;
+}
+
+
+.input-area{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin: auto;
+	background-color: var(--InputFieldColour);
+	border:1px solid var(--BorderColour);
+	border-radius: 5px;
+	width: 100%;
+	color: black;
+
+}
+
+.submit-button{
+	width: 100%;
+	margin-top: 10px;
+ 	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--MainColour);
+	color: var(--MainText);
+	font-family: 'Roboto Mono', monospace;
+
+}
+
+
+@media screen and (max-width: 1200px){ /*This is a query, when width is 1200 or less class main-container change */
+	.main-container{
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 900px){ /*This is a query, when width is 900 or less class intro-wrapper change*/
+	.introduction-wrapper{ 
+		grid-template-columns: 1fr; /* here we only have space for 1 collumn */
+		grid-template-areas: 
+		"topbar-wrapper"  /*"topbar-wrapper"span through 1 collumn only*/   
+		"Left-Collumn-wrapper"
+		"Right-Collumn-wrapper"/*left and right each span 1 collumn only*/
+		;
+
+	}
+
+	.Right-Collumn-wrapper{ /*Add padding to the right collumn to prevent overflow*/
+		justify-content: center;
+		padding-left: 70px;
+
+	}  
+
+}
+
+
+
+
+
+

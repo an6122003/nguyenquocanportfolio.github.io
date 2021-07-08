@@ -1,0 +1,26 @@
+:root{
+	--MainColour: #171717; /*background colour*/
+	--SecondaryColour: #444444; /*lighter background colour*/
+
+	--BorderColour: #424642;
+
+	--MainText: white;
+	--SecondaryText: whitesmoke  ; /*lighter black*/
+
+	--ModeCircleBorder: white;
+	--BackShadow: #F0F1F1;
+
+	--InputFieldColour: white;
+
+	--ButtonsColour: white;
+
+	--NameCircleBg: white;
+	--NameCircleText: black;
+
+	--BoxColour: white;
+	--BoxTextColour: white;
+
+	--ConsecutiveBoxBg: white;
+	--ConsecutiveBoxText: black;
+
+}
